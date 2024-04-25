@@ -64,15 +64,15 @@ class RestApplicationTests {
 				.andExpect(MockMvcResultMatchers.status().isOk());
 	}
 
-	// @Test
-	// void testEnrollStudentInCourse() throws Exception {
-	// long studentId = 1; // Change this to a valid student ID
-	// long courseId = 1; // Change this to a valid course ID
-	// mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/course/enroll")
-	// .contentType(MediaType.APPLICATION_JSON)
-	// .param("studentId", String.valueOf(studentId))
-	// .param("courseId", String.valueOf(courseId)))
-	// .andExpect(MockMvcResultMatchers.status().isOk());
-	// }
+	@Test
+	void testEnrollStudentInCourse() throws Exception {
+	long studentId = 1; // Change this to a valid student ID
+	long courseId = 1; // Change this to a valid course ID
+	mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/course/enroll")
+	.contentType(MediaType.APPLICATION_JSON)
+	.param("studentId", String.valueOf(studentId))
+	.param("courseId", String.valueOf(courseId)))
+	.andExpect(MockMvcResultMatchers.status().isOk());
+	}
 
 }
